@@ -17,8 +17,18 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			'gaming': ['Rubik', 'sans-serif']
+		},
 		extend: {
 			colors: {
+				roblox: {
+					blue: '#00A2FF',
+					red: '#FF6B6B',
+					yellow: '#FFCDC4',
+					green: '#4ECDC4',
+					purple: '#9b87f5'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +94,28 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-in': {
+					'0%': { transform: 'scale(0.3)', opacity: '0' },
+					'50%': { transform: 'scale(1.05)' },
+					'70%': { transform: 'scale(0.9)' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 5px #00A2FF' },
+					'50%': { boxShadow: '0 0 20px #00A2FF, 0 0 30px #00A2FF' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-in': 'bounce-in 0.6s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate'
 			}
 		}
 	},
